@@ -1,0 +1,342 @@
+:root {
+    --header-image: url('../public/banner.png');
+    /*--body-bg-image: url('https://sadhost.neocities.org/images/tiles/purplesky.gif');
+
+    /* colors */
+    --content: #181819;
+}
+
+/* Light (300), Regular (400), Medium (500), SemiBold (600), Bold (700) */
+@font-face {
+  font-family: 'Teko';
+  src: url('../public/fonts/teko/Teko-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../public/fonts/teko/Teko-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../public/fonts/teko/Teko-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../public/fonts/teko/Teko-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../public/fonts/teko/Teko-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('../public/fonts/khand/Khand-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('../public/fonts/khand/Khand-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('../public/fonts/khand/Khand-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+
+body {
+    font-family: 'Khand', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background-color: #0a0a0b;
+    background-size: 65px;
+    color: #fceaff;
+    background-image: var(--body-bg-image);
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* CSS */
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container a {
+    color: #93DDD5;
+    font-weight: bold;
+}
+
+#header {
+    width: 100%;
+    background-color: #0a0a0b;
+    height: 200px;
+    background-image: var(--header-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-attachment: scroll;
+    max-width: 100%;
+}
+
+/* navigation section */
+#navbar {
+    height: 40px;
+    background-color: #0a0a0b;
+    width: 100%;
+    
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none; /*removes the underline */
+}
+
+#navbar li a:hover {
+    color: #93DDD5;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+/* colors both sidebars
+aside {
+    background-color: #241445;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+} */
+
+main {
+    background-color: #181819;
+    flex: 1;
+    padding: 40px;
+    order: 2;
+    min-height: 100vh;
+    border: 2px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#leftSidebar {
+    background-color: #181819;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    order: 1;
+    border: 2px solid white;
+}
+
+#rightSidebar {
+    background-color: #181819;
+    width: 300px;
+    padding: 20px;
+    font-size: smaller;
+    order: 3;
+    border: 2px solid white; 
+}
+
+footer {
+    background-color: #0a0a0b;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 700;
+    color: #93DDD5;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+strong, b {
+    font-weight: 700;
+    color: #93DDD5;
+}
+
+.box {
+    font-family: inherit;
+    background-color: #272728;
+    border: 1px solid #93DDD5;
+    padding: 10px;
+}
+
+/* Hamburger menu styles - only visible on mobile */
+.hamburger {
+    display: none; /* Hidden by default (shown in media query) */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000; /* Ensure it's above other elements */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 5px;
+}
+
+/* Close button for sidebar - only visible when sidebar is open */
+.close-sidebar {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1001; /* Above sidebar content */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 5px;
+}
+
+/* Overlay for when sidebar is open */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100; /* Below sidebar but above main content */
+}
+
+/* Media query, I havent tested any of this yet lol */
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-direction: column; /* Stack elements vertically */
+        flex-wrap: nowrap;
+    }
+
+    /* Left sidebar styling for mobile (collapsible) */
+    #leftSidebar {
+        position: fixed;
+        top: 0;
+        left: -250px; /* Hidden off-screen by default */
+        width: 200px;
+        height: 100vh;
+        padding: 20px;
+        z-index: 200;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        order: 1;
+
+        border-right: 2px solid white;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+    }
+
+    /* Right sidebar styling (appears below main content) */
+    #rightSidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        order: 3;
+        border: 2px solid white;
+        margin-top: 20px;
+        
+    }
+
+    main {
+        order: 2;
+        width: 100%;
+        min-height: auto; /* Remove fixed viewport height */
+    }
+
+    /* Show hamburger button on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+
+    /* Active state for left sidebar (when visible) */
+    #leftSidebar.active {
+        width: 400px;
+        padding: 25px;
+        left: 0;
+        border-right: 2px solid white;
+    }
+
+    /* Increase font sizes when sidebar is active */
+    #leftSidebar.active h2 {
+        font-size: 1.5rem;
+    }
+
+    #leftSidebar.active h3 {
+        font-size: 1.15rem;
+    }
+
+    #leftSidebar.active .box,
+    #leftSidebar.active ul {
+        font-size: 1.05rem;
+    }
+
+    /* Show overlay when left sidebar is active */
+    .overlay.active {
+        display: block;
+    }
+
+    /* Show close button when sidebar is active */
+    .close-sidebar.active {
+        display: block;
+    }
+
+    /* Hide hamburger when sidebar is active */
+    .hamburger.active {
+        display: none;
+    }
+    
+    /* Adjust header to accommodate hamburger */
+    #header {
+        padding-left: 40px;
+        background-size: contain;
+        height: 150px;
+    }
+}

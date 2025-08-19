@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My title !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+    <!-- Overlay that appears when sidebar is open (click to close) -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Main container -->
+    <div id="container">
+        <!-- Header area containing both the header image and navigation -->
+        <div id="headerArea">
+            <!-- Header with background image (clickable) -->
+            <a href="index.html" style="display: block; text-decoration: none;">
+                <div id="header" style="height: 177px;">
+                    <!-- Header content only - no button here -->
+                </div>
+            </a>
+            
+            <!-- Hamburger button outside the anchor -->
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            
+            <!-- Navigation bar -->
+            <nav id="navbar">
+                <ul>
+                    <p>Welcome</p>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Flex container for sidebars and main content -->
+        <div id="flex">
+            <!-- Left sidebar - collapses into hamburger menu on mobile -->
+            <aside id="leftSidebar">
+                <!-- Close button for sidebar (shown when sidebar is open) -->
+                <button class="close-sidebar" id="closeSidebarBtn">✕</button>
+                <h2>Navigation</h2>
+                    <div class="box">
+                        <ul style="padding-left:10px;">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages/artwork/">Artwork</a></li>
+
+                        </ul>
+                    </div>
+                <h2>Updates</h2>
+                <!-- Styled box for content sections -->
+                <div class="box">
+                    <p> hallo</p>
+                    <ul style="padding-left:10px;">
+                        <li>asdasdsdgasd <a href="https://crouton.net/" target="_blank">randomlink</a></li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <!-- Main content area -->
+            <main>
+                <h1>Hallo everynyan</h1>
+                <p><strong>How are youw?</strong></p>
+                <p>Fine. Why tank you</p>
+                <p>I wish i were a bird .</p>
+                <p>Huh<a href="https://crouton.net/" target="_blank"> wahhhh</a></p>
+            </main>
+            
+            <!-- Right sidebar - remains visible on all screen sizes -->
+            <aside id="rightSidebar">
+                <h2>Right Sidebar</h2>
+                
+                <div class="box">
+                    <p>visible on all screen sizes.</p>
+                    <ul style="padding-left:10px;">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <h3>Additional Content</h3>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </aside>
+        </div>
+        
+        <!-- Footer section -->
+        <footer id="footer">© 2025 Tatsumelon</footer>
+    </div>
+
+        <!-- Shared JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>

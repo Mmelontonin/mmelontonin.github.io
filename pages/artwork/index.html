@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Artwork Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../../style/artwork.css">
+    
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <div id="container">
+        <!-- Header area containing both the header image and navigation -->
+        <div id="headerArea">
+            <!-- Header with background image (clickable) -->
+            <a href="../../index.html" style="display: block; text-decoration: none;">
+                <div id="header" style="height: 177px;">
+                    <!-- Header content only - no button here -->
+                </div>
+            </a>
+            
+            <!-- Hamburger button outside the anchor -->
+            <button class="hamburger" id="hamburgerBtn">☰</button>
+            
+            <!-- Navigation bar -->
+            <nav id="navbar">
+                <ul>
+                    <p>Welcome</p>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="flex">
+            <aside id="leftSidebar">
+                <button class="close-sidebar" id="closeSidebarBtn">✕</button>
+                <h2>Navigation</h2>
+                <div class="box">
+                    <ul style="padding-left:10px;">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="index.html">Artwork</a></li>
+                    </ul>
+                </div>
+                
+            </aside>
+            
+            <main>
+                <h1>Artworks</h1>
+                <div class="gallery-container">
+                    <div class="view-controls">
+                        <button id="grid-view" style="display:none;">Grid View</button>
+                        <button id="timeline-view">Timeline View</button>
+                    </div>
+
+                    <div class="filters">
+                        <input type="text" id="search" placeholder="Search by title...">
+                        <div class="filter-group">
+                            <h3>Collections</h3>
+                            <div id="collection-filters"></div>
+                        </div>
+                        <div class="filter-group">
+                            <h3>Categories</h3>
+                            <div id="category-filters"></div>
+                        </div>
+                        
+                    </div>
+
+                    <div id="artwork-grid" class="art-grid"></div>
+                    <div id="timeline-view" class="timeline" style="display:none"></div>
+                </div>
+
+                <div id="lightbox" class="lightbox">
+                    <button class="lightbox-close">X</button>
+                    <div class="lightbox-content">
+                        <button class="nav-arrow left-arrow">&larr;</button>
+                        <div class="artwork-display">
+                            <img id="lightbox-image" src="" alt="">
+                            <div class="artwork-info">
+                                <h3 id="lightbox-title"></h3>
+                                <p id="lightbox-meta"></p>
+                                <p id="lightbox-tags" class="lightbox-tags"></p>
+                            </div>
+                        </div>
+                        <button class="nav-arrow right-arrow">&rarr;</button>
+                    </div>
+                    <div class="mobile-nav-area left"></div>
+                    <div class="mobile-nav-area right"></div>
+                </div>
+            </main>
+            
+            <aside id="rightSidebar" style="display:none;"></aside>
+        </div>
+        
+        <footer id="footer">© 2025 Tatsumelon</footer>
+    </div>
+
+    <!-- Shared JavaScript -->
+    <script src="../../scripts/main.js"></script>
+    
+    <!-- Artwork gallery JavaScript -->
+    <script src="../../scripts/artwork.js"></script>
+</body>
+</html>
