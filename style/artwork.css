@@ -51,26 +51,30 @@ body {
 /* ============ TIMELINE VIEW ============ */
 
 .timeline {
-    width: 100%;
-    max-width: 100%;
-    overflow-y: auto;
+  display: block;
 }
 
-.timeline-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-    
+.timeline-year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .timeline-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    border: 1px solid #93DDD5;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;    
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 /* ============ FILTER CONTROLS ============ */
@@ -165,7 +169,7 @@ body {
   /* Navigation arrow buttons */
   background: transparent;
   border: none;
-  color: white;
+  color: #ffffff;
   font-size: 2rem;
   padding: 15px;
   cursor: pointer;
@@ -213,26 +217,27 @@ body {
         width: 40px;
         height: 40px;
         font-size: 1.5rem;
-    }
+  }
     
-    .nav-arrow {
-        width: 50px;
-        height: 50px;
-        font-size: 2rem;
-        margin: 0 10px;
-    }
-    
-    #lightbox-image {
-        max-height: 70vh;
-        max-width: 95vw;
-    }
+  .nav-arrow {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+      margin: 0 10px;
+  }
+  
+  #lightbox-image {
+      max-height: 70vh;
+      max-width: 95vw;
+  }
 
   .art-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .timeline-item img {
-        height: 150px;
+        max-width: 90%;
+        height: auto;
   }
   
   .filters {

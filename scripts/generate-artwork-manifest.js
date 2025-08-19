@@ -6,11 +6,19 @@ const chokidar = require('chokidar');
 const ARTWORK_DIR = path.join(__dirname, '../pictures/artwork');
 const MANIFEST_PATH = path.join(__dirname, '../data/artwork-manifest.json');
 
+// Map shorthand -> full category name
+const categoryMap = {
+  "illus": "Illustration",
+  "anim": "Animation",
+  "sketch": "Sketch",
+  "misc": "Misc"
+};
+
 /**
  * Capitalize first letter of each word in a string
  */
 function capitalizeWords(str) {
-  if (!str) return '';
+  if (!str || typeof str !== 'string') return '';
   return str
     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -28,24 +36,26 @@ function generateManifest() {
     // Parse filename: YYYY-MM-DD_collection_category_title_tag.filetype
     const parts = file.replace(/\.[^/.]+$/, "").split('_');
     
-    // Extract positions
     const date = parts[0] || new Date().toISOString().split('T')[0];
-    const collection = parts[1] || 'uncategorized';
-    const category = parts[2] || 'misc';
+    const collection = capitalizeWords(parts[1] || 'uncategorized');
     
-    // Title is part 3 (convert hyphens to spaces and capitalize)
+    // Lookup category from shorthand map
+    const rawCategory = (parts[2] || 'misc').toLowerCase();
+    const category = categoryMap[rawCategory] || capitalizeWords(rawCategory);
+
+    // Title: 3 (convert hyphens to spaces and capitalize)
     const title = parts.length > 3 ? capitalizeWords(parts[3].replace(/-/g, ' ')) : 'Untitled';
     
-    // Tag is part 4 if exists (convert hyphens to spaces and capitalize)
+    // Tag: 4 if exists (convert hyphens to spaces and capitalize)
     const tag = parts.length > 4 ? capitalizeWords(parts[4].replace(/-/g, ' ')) : '';
 
     return {
       src: `/pictures/artwork/${file}`,
-      date: date,
-      collection: capitalizeWords(collection), // Capitalize collection
-      category: capitalizeWords(category),     // Capitalize category
-      title: title,                            // Already capitalized
-      tag: tag                                 // Already capitalized
+      date,
+      collection,
+      category,
+      title,
+      tag
     };
   });
 

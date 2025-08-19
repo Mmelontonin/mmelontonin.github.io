@@ -8,7 +8,7 @@ const elements = {
     gridViewBtn: document.getElementById('grid-view'),
     timelineViewBtn: document.getElementById('timeline-view'),
     artworkGrid: document.getElementById('artwork-grid'),
-    timelineContainer: document.getElementById('timeline-view'),
+    timelineContainer: document.getElementById('timeline-container'),
     lightbox: document.getElementById('lightbox'),
     searchInput: document.getElementById('search'),
     collectionFilters: document.getElementById('collection-filters'),
@@ -75,6 +75,10 @@ function setupFilters() {
     const collections = [...new Set(artworks.map(a => a.collection))];
     const categories = [...new Set(artworks.map(a => a.category))];
     
+    console.log('Available collections:', collections);
+    console.log('Available categories:', categories);
+    
+    // Create checkboxes with the EXACT values from manifest
     elements.collectionFilters.innerHTML = collections.map(c => `
         <label>
             <input type="checkbox" value="${c}" checked> ${c}
@@ -184,20 +188,23 @@ function switchToTimelineView() {
  * Apply all active filters
  */
 function applyFilters() {
-    const searchTerm = elements.searchInput.value.toLowerCase();
+    const rawSearch = elements.searchInput.value.toLowerCase();
+    const searchTerms = rawSearch.split(',')
+                                 .map(s => s.trim())
+                                 .filter(s => s.length > 0);
+
     const collectionFilters = getCheckedValues('collection-filters');
     const categoryFilters = getCheckedValues('category-filters');
     
     const filtered = artworks.filter(art => {
-        const matchesSearch = art.title.toLowerCase().includes(searchTerm) || 
-                            (art.tag && art.tag.toLowerCase().includes(searchTerm));
-        
-        const matchesCollection = collectionFilters.length === 0 || 
-                                collectionFilters.includes(art.collection);
-                                
-        const matchesCategory = categoryFilters.length === 0 || 
-                              categoryFilters.includes(art.category);
-        
+        const matchesSearch = searchTerms.length === 0 || searchTerms.some(term =>
+            art.title.toLowerCase().includes(term) ||
+            (art.tag && art.tag.toLowerCase().includes(term))
+        );
+
+        const matchesCollection = collectionFilters.includes(art.collection);
+        const matchesCategory = categoryFilters.includes(art.category);
+
         return matchesSearch && matchesCollection && matchesCategory;
     });
     
@@ -207,6 +214,8 @@ function applyFilters() {
         renderTimelineView(filtered);
     }
 }
+
+
 /**
  * Get checked values from filter group
  */
