@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'pictures/artwork/**'  # run when file in artwork folder change
+      - 'pictures/artwork/**'
 
 jobs:
   update-manifest:
@@ -20,19 +20,19 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install chokidar     
+        run: |
+          npm install chokidar
 
       - name: Generate artwork manifest
         run: |
-          npm install         # Install any dependencies (like chokidar)
-          node scripts/generate-artwork-manifest.js  # Run your manifest generator
+          node scripts/generate-artwork-manifest.js
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if there are changes to commit
+          # Stage the manifest
           git add data/artwork-manifest.json
           
           # Commit only if there are changes
@@ -40,4 +40,4 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Auto-update artwork manifest [skip ci]"
-            git push  
+            git push
