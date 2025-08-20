@@ -22,14 +22,12 @@ jobs:
         with:
           node-version: '20'
 
-      # install chokidar (req by generate-artwork-manifest.js)
       - name: Install dependencies
         run: npm install chokidar
 
       - name: Generate artwork manifest
         run: node scripts/generate-artwork-manifest.js
 
-      # debug
       - name: Show generated manifest
         run: cat data/artwork-manifest.json
 
@@ -43,6 +41,7 @@ jobs:
           else
             git commit -m "Auto-update artwork manifest [skip ci]"
             git push
+          fi
 
       - name: Build site
         run: |
