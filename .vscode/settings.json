@@ -1,0 +1,4 @@
+{
+  "tasks.autoDetect": "on",
+  "tasks.runOnStartup": ["Watch Artwork Folder"]
+}

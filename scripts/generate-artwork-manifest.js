@@ -1,3 +1,9 @@
+/* depends on chokidar
+ * terminal: npm init -y
+ * npm install chokidar
+ * run script: node scripts/generate-artwork-manifest.js --watch
+*/
+
 //file format: YYYY-MM-DD_collection_category_title_tag.filetype
 const fs = require('fs');
 const path = require('path');
@@ -10,6 +16,7 @@ const MANIFEST_PATH = path.join(__dirname, '../data/artwork-manifest.json');
 const categoryMap = {
   "illus": "Illustration",
   "anim": "Animation",
+  "comic": "Comic",
   "sketch": "Sketch",
   "misc": "Misc"
 };

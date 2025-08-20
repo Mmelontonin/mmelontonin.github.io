@@ -1,0 +1,27 @@
+/* node.js needs to be installed, in cmd type node -v to check if it is
+ * ctrl+shift+p -> "Run Taks"
+ * for one time generation -> Generate Artwork Manifest
+ * for continuous -> "Watch Artwork Folder"
+ */
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Artwork Manifest",
+      "type": "shell",
+      "command": "node scripts/generate-artwork-manifest.js",
+      "group": "build"
+    },
+    {
+      "label": "Watch Artwork Folder",
+      "type": "shell",
+      "command": "node scripts/generate-artwork-manifest.js --watch",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never"
+      }
+    }
+  ]
+}
