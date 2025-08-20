@@ -9,8 +9,8 @@ const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
 
-const ARTWORK_DIR = path.join(__dirname, '../pictures/artwork');
-const MANIFEST_PATH = path.join(__dirname, '../data/artwork-manifest.json');
+const ARTWORK_DIR = path.join(process.cwd(), 'pictures/artwork');
+const MANIFEST_PATH = path.join(process.cwd(), 'data/artwork-manifest.json');
 
 // Map shorthand -> full category name
 const categoryMap = {
