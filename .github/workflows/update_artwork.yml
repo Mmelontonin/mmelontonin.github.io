@@ -1,4 +1,5 @@
 name: Update Artwork Manifest
+
 on:
   push:
     branches: [ main ]
@@ -8,11 +9,13 @@ on:
 jobs:
   update-manifest:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -20,24 +23,19 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: |
-          npm install chokidar
+        run: npm ci || npm install
 
       - name: Generate artwork manifest
-        run: |
-          node scripts/generate-artwork-manifest.js
+        run: node scripts/generate-artwork-manifest.js
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Stage the manifest
           git add data/artwork-manifest.json
-          
-          # Commit only if there are changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Auto-update artwork manifest [skip ci]"
             git push
+          fi
