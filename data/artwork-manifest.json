@@ -1,131 +1,11 @@
 [
   {
-    "src": "/pictures/artwork/2021-06-18_fanart_illus_video-killed-the-readio-star_just-dance.png",
-    "date": "2021-06-18",
+    "src": "/pictures/artwork/2025-07-15_fanart_illus_cysova-seasons_val.png",
+    "date": "2025-07-15",
     "collection": "Fanart",
     "category": "Illustration",
-    "title": "Video Killed The Readio Star",
-    "tag": "Just Dance"
-  },
-  {
-    "src": "/pictures/artwork/2021-08-19_personal_illus_clyde.png",
-    "date": "2021-08-19",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Clyde",
-    "tag": ""
-  },
-  {
-    "src": "/pictures/artwork/2022-12-30_personal_illus_floating-islands.png",
-    "date": "2022-12-30",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Floating Islands",
-    "tag": ""
-  },
-  {
-    "src": "/pictures/artwork/2023-09-07_personal_illus_hunt_detective-04.png",
-    "date": "2023-09-07",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Hunt",
-    "tag": "Detective 04"
-  },
-  {
-    "src": "/pictures/artwork/2023-10-13_personal_illus_detective_detective-01.png",
-    "date": "2023-10-13",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Detective",
-    "tag": "Detective 01"
-  },
-  {
-    "src": "/pictures/artwork/2023-11-02_personal_comic_fountain_detective-02.png",
-    "date": "2023-11-02",
-    "collection": "Personal",
-    "category": "Comic",
-    "title": "Fountain",
-    "tag": "Detective 02"
-  },
-  {
-    "src": "/pictures/artwork/2023-11-02_personal_illus_hotel_detective-03.png",
-    "date": "2023-11-02",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Hotel",
-    "tag": "Detective 03"
-  },
-  {
-    "src": "/pictures/artwork/2023-12-05_personal_comic_enounter_detective-05.png",
-    "date": "2023-12-05",
-    "collection": "Personal",
-    "category": "Comic",
-    "title": "Enounter",
-    "tag": "Detective 05"
-  },
-  {
-    "src": "/pictures/artwork/2024-01-24_personal_comic_stay-down_detective-06.png",
-    "date": "2024-01-24",
-    "collection": "Personal",
-    "category": "Comic",
-    "title": "Stay Down",
-    "tag": "Detective 06"
-  },
-  {
-    "src": "/pictures/artwork/2024-02-22_personal_illus_closing-the-curtains_detective-06.png",
-    "date": "2024-02-22",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Closing The Curtains",
-    "tag": "Detective 06"
-  },
-  {
-    "src": "/pictures/artwork/2024-03-30_personal_illus_footprints_detective-08.png",
-    "date": "2024-03-30",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Footprints",
-    "tag": "Detective 08"
-  },
-  {
-    "src": "/pictures/artwork/2024-05-09_personal_illus_case-closed_detective-09.png",
-    "date": "2024-05-09",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Case Closed",
-    "tag": "Detective 09"
-  },
-  {
-    "src": "/pictures/artwork/2024-10-24_personal_illus_cupid_cupioromantic.png",
-    "date": "2024-10-24",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Cupid",
-    "tag": "Cupioromantic"
-  },
-  {
-    "src": "/pictures/artwork/2025-07-03_fanart_illus_friendship-is-magic_utdr-mlp.png",
-    "date": "2025-07-03",
-    "collection": "Fanart",
-    "category": "Illustration",
-    "title": "Friendship Is Magic",
-    "tag": "Utdr Mlp"
-  },
-  {
-    "src": "/pictures/artwork/2025-07-08_personal_illus_cathode_WLF.png",
-    "date": "2025-07-08",
-    "collection": "Personal",
-    "category": "Illustration",
-    "title": "Cathode",
-    "tag": "Wlf"
-  },
-  {
-    "src": "/pictures/artwork/2025-07-09_fanart_illus_spamtenna_utdr.png",
-    "date": "2025-07-09",
-    "collection": "Fanart",
-    "category": "Illustration",
-    "title": "Spamtenna",
-    "tag": "Utdr"
+    "title": "Cysova Seasons",
+    "tag": "Val"
   },
   {
     "src": "/pictures/artwork/2025-07-12_fanart_illus_goodnight-dreemur_mlp-utdr.png",
@@ -144,11 +24,131 @@
     "tag": ""
   },
   {
-    "src": "/pictures/artwork/2025-07-15_fanart_illus_cysova-seasons_val.png",
-    "date": "2025-07-15",
+    "src": "/pictures/artwork/2025-07-09_fanart_illus_spamtenna_utdr.png",
+    "date": "2025-07-09",
     "collection": "Fanart",
     "category": "Illustration",
-    "title": "Cysova Seasons",
-    "tag": "Val"
+    "title": "Spamtenna",
+    "tag": "Utdr"
+  },
+  {
+    "src": "/pictures/artwork/2025-07-08_personal_illus_cathode_WLF.png",
+    "date": "2025-07-08",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Cathode",
+    "tag": "Wlf"
+  },
+  {
+    "src": "/pictures/artwork/2025-07-03_fanart_illus_friendship-is-magic_utdr-mlp.png",
+    "date": "2025-07-03",
+    "collection": "Fanart",
+    "category": "Illustration",
+    "title": "Friendship Is Magic",
+    "tag": "Utdr Mlp"
+  },
+  {
+    "src": "/pictures/artwork/2024-10-24_personal_illus_cupid_cupioromantic.png",
+    "date": "2024-10-24",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Cupid",
+    "tag": "Cupioromantic"
+  },
+  {
+    "src": "/pictures/artwork/2024-05-09_personal_illus_case-closed_detective-09.png",
+    "date": "2024-05-09",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Case Closed",
+    "tag": "Detective 09"
+  },
+  {
+    "src": "/pictures/artwork/2024-03-30_personal_illus_footprints_detective-08.png",
+    "date": "2024-03-30",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Footprints",
+    "tag": "Detective 08"
+  },
+  {
+    "src": "/pictures/artwork/2024-02-22_personal_illus_closing-the-curtains_detective-06.png",
+    "date": "2024-02-22",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Closing The Curtains",
+    "tag": "Detective 06"
+  },
+  {
+    "src": "/pictures/artwork/2024-01-24_personal_comic_stay-down_detective-06.png",
+    "date": "2024-01-24",
+    "collection": "Personal",
+    "category": "Comic",
+    "title": "Stay Down",
+    "tag": "Detective 06"
+  },
+  {
+    "src": "/pictures/artwork/2023-12-05_personal_comic_enounter_detective-05.png",
+    "date": "2023-12-05",
+    "collection": "Personal",
+    "category": "Comic",
+    "title": "Enounter",
+    "tag": "Detective 05"
+  },
+  {
+    "src": "/pictures/artwork/2023-11-02_personal_comic_fountain_detective-02.png",
+    "date": "2023-11-02",
+    "collection": "Personal",
+    "category": "Comic",
+    "title": "Fountain",
+    "tag": "Detective 02"
+  },
+  {
+    "src": "/pictures/artwork/2023-11-02_personal_illus_hotel_detective-03.png",
+    "date": "2023-11-02",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Hotel",
+    "tag": "Detective 03"
+  },
+  {
+    "src": "/pictures/artwork/2023-10-13_personal_illus_detective_detective-01.png",
+    "date": "2023-10-13",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Detective",
+    "tag": "Detective 01"
+  },
+  {
+    "src": "/pictures/artwork/2023-09-07_personal_illus_hunt_detective-04.png",
+    "date": "2023-09-07",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Hunt",
+    "tag": "Detective 04"
+  },
+  {
+    "src": "/pictures/artwork/2022-12-30_personal_illus_floating-islands.png",
+    "date": "2022-12-30",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Floating Islands",
+    "tag": ""
+  },
+  {
+    "src": "/pictures/artwork/2021-08-19_personal_illus_clyde.png",
+    "date": "2021-08-19",
+    "collection": "Personal",
+    "category": "Illustration",
+    "title": "Clyde",
+    "tag": ""
+  },
+  {
+    "src": "/pictures/artwork/2021-06-18_fanart_illus_video-killed-the-radio-star_just-dance.png",
+    "date": "2021-06-18",
+    "collection": "Fanart",
+    "category": "Illustration",
+    "title": "Video Killed The Radio Star",
+    "tag": "Just Dance"
   }
 ]
