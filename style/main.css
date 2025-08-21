@@ -131,6 +131,7 @@ body {
 
 #flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* colors bothsidebars
@@ -148,8 +149,6 @@ main {
     order: 2;
     min-height: 100vh;
     border: 2px solid white;
-    margin-left: 20px;
-    margin-right: 20px;
     overflow: hidden;
 }
 
@@ -258,7 +257,6 @@ strong, b {
         left: -250px; /* Hidden off-screen by default */
         width: 200px;
         height: 100vh;
-        padding: 20px;
         z-index: 200;
         transition: left 0.3s ease;
         overflow-y: auto;

@@ -129,11 +129,9 @@ body {
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed;
     background: rgba(0,0,0,0.5);
-    border: #0a0a0b;
+    border: none;
     color: #ffffff;
     font-size: 2rem;
     width: 50px;
@@ -155,6 +153,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #lightbox-image {

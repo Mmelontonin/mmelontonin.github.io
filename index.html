@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>My title !</title>
+    <title>Tatsumelon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="style/main.css" />
@@ -39,19 +39,16 @@
             <aside id="leftSidebar">
                 <!-- Close button for sidebar (shown when sidebar is open) -->
                 <button class="close-sidebar" id="closeSidebarBtn">✕</button>
-                <h2><a href="/">Home</a></h2>
-                <h2><a href="/pages/artwork/">Artwork</a></h2>
-                
-                <p>____________________</p>
+                <div id="sidebar-container"></div>
 
-                <h2>Updates</h2>
-                <!-- Styled box for content sections -->
-                <div class="box">
-                    <p> hallo</p>
-                    <ul style="padding-left:10px;">
-                        <li>asdasdsdgasd <a href="https://crouton.net/" target="_blank">randomlink</a></li>
-                    </ul>
-                </div>
+                <script>
+                fetch("/partials/sidebar.html")
+                    .then(res => res.text())
+                    .then(html => {
+                    document.getElementById("sidebar-container").innerHTML = html;
+                    });
+                </script>
+
             </aside>
             
             <!-- Main content area -->
@@ -75,12 +72,7 @@
                         <li>Item 3</li>
                     </ul>
                 </div>
-                <h3>Additional Content</h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                </ul>
+
             </aside>
         </div>
         
